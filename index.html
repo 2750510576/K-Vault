@@ -2395,13 +2395,13 @@
       </div>
 
       <!-- 访客模式提示条 -->
-      <div class="guest-notice" v-if="!authChecking && isGuest && guestUploadConfig">
+      <!--<div class="guest-notice" v-if="!authChecking && isGuest && guestUploadConfig">
         <i class="fas fa-user-clock"></i>
         <span
           >访客模式 - 单文件最大 {{ formatSize(guestUploadConfig.maxFileSize)
           }}，每日上限 {{ guestUploadConfig.maxDailyUploads }} 次</span
         >
-      </div>
+      </div>-->
 
       <!-- 主内容区 -->
       <div class="main-container">
@@ -2416,7 +2416,7 @@
               v-if="!authChecking && isGuest && guestUploadConfig"
               style="color: var(--warning-text-color); font-size: 0.85em"
               >访客模式 - 单文件最大 {{
-              formatSize(guestUploadConfig.maxFileSize) }}</span
+              formatSize(guestUploadConfig.maxFileSize) }}，每日上限 {{ guestUploadConfig.maxDailyUploads }} 次</span
             >
             <span v-else style="color: var(--text-muted); font-size: 0.85em">
               当前存储单文件上限：{{ currentUploadLimitLabel }}
